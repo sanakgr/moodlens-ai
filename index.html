@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MoodLens AI analyzes the emotional tone of text and explains every score.">
+  <title>MoodLens AI | Explainable Sentiment Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><a class="logo" href="#"><span>ML</span> MoodLens <b>AI</b></a><div class="header-note">Explainable language intelligence</div><a class="github-link" href="https://github.com/sanakgr" target="_blank" rel="noreferrer">GitHub ↗</a></header>
+  <main>
+    <section class="hero"><div><p class="kicker">READ BETWEEN THE LINES</p><h1>Understand the feeling<br><em>behind the words.</em></h1></div><p class="hero-copy">MoodLens analyzes emotional tone and shows exactly which words shaped the result. No black box. No data leaves your device.</p></section>
+    <section class="workspace">
+      <article class="input-card">
+        <div class="card-header"><div><span class="step">01</span><h2>Your text</h2></div><button id="clearButton">Clear</button></div>
+        <label class="sr-only" for="textInput">Text to analyze</label><textarea id="textInput" maxlength="1200" placeholder="Paste a review, message, or paragraph here...">The new update is incredibly fast and the design feels thoughtful. I had one frustrating issue during setup, but the support team was helpful and solved it quickly.</textarea>
+        <div class="input-footer"><div class="samples">Try: <button data-sample="positive">Positive</button> <button data-sample="mixed">Mixed</button> <button data-sample="negative">Negative</button></div><span id="characterCount">0 / 1200</span></div>
+        <button class="analyze-button" id="analyzeButton"><span>Analyze emotion</span><b>→</b></button>
+      </article>
+      <article class="results-card" id="resultsCard">
+        <div class="card-header"><div><span class="step">02</span><h2>Analysis</h2></div><span class="live-pill"><i></i> Live model</span></div>
+        <div class="score-block"><div class="score-ring" id="scoreRing"><div><strong id="scoreValue">78</strong><span>/100</span></div></div><div><p class="result-label">OVERALL TONE</p><h3 id="toneLabel">Mostly positive</h3><p id="confidenceLabel">High confidence · balanced language</p></div></div>
+        <div class="metrics" id="metrics"></div>
+        <div class="explanation"><p class="result-label">WHAT INFLUENCED THE SCORE</p><div class="highlighted-text" id="highlightedText"></div><div class="legend"><span><i class="positive-dot"></i> Positive signal</span><span><i class="negative-dot"></i> Negative signal</span></div></div>
+        <div class="rewrite"><div><p class="result-label">CLARITY SUGGESTION</p><p id="rewriteText"></p></div><button id="copyButton">Copy</button></div>
+      </article>
+    </section>
+    <section class="how-it-works"><p class="kicker">TRANSPARENT BY DESIGN</p><div class="process"><div><span>1</span><h3>Tokenize</h3><p>Break text into meaningful words and phrases.</p></div><div><span>2</span><h3>Score</h3><p>Measure sentiment, intensity, and negation.</p></div><div><span>3</span><h3>Explain</h3><p>Show the signals behind every conclusion.</p></div></div></section>
+  </main>
+  <footer>Built with transparent, local-first NLP · 2026</footer><script src="app.js"></script>
+</body>
+</html>
